@@ -53,7 +53,7 @@ This endpoint can be called with one of these queries, which you should be prepa
 
 2. ```'GET' /api/users/``` + userId
 
-The test will a GET request with the userId as a parameter to this endpoint. Remember, request params will come as strings. If the user is found, respond with status 200 and send that user information.
+The tests will send a GET request with the userId as a parameter to this endpoint. Remember, request params will come as strings. If the user is found, respond with status 200 and send that user information.
 
 If no user was found, respond with a status of ```404``` and ```null```.
 **NOTE:** You will need to use ```.json()``` instead of ```.send()``` when sending just ```null```.
@@ -69,24 +69,24 @@ Respond with status 200, and an array of all non-admin users.
 
 5. ```'GET' /api/user_type/``` + userType
 
-Respond with status 200, and an array of all users that match the userType parameter.
+Respond with status 200, and an array of all users that match the ```userType``` parameter.
 
 6. ```'PUT' /api/users/``` + userId
 
-A user object will be sent in the request body. You should update the user object that has an id that matches the userId parameter.
+A user's information will be sent in the request body. You should update the user object that has an id matching the ```userId``` parameter.
 
 Return with status 200, and the entire array of user objects *after* you have updated the correct user object.
 
 7. ```'POST' /api/users```
 
-A user object will be sent in the request body. You will need to add an id to this user object before adding it to the users array.
+A user's information will be sent in the request body. It will contain the same type of user information container in the other user objects, except for the id. You will need to add an id to this user object before adding it to the users array.
 
-The user IDs are sequential. If the last user object had an ID of 100, the new user object should have an ID of 101 and the next user object added should have an ID of 102. The Postman test will add multiple user objects and check the IDs.
+The user IDs are sequential. If the last user object had an ID of 100, the new user object should have an ID of 101 and the next user object added should have an ID of 102, etc. The Postman tests will add multiple user objects and check the IDs.
 
 You should return status 200 along with the entire array of user objects *after* the new user object has been added.
 
 8. ```'DELETE' /api/users/``` + userId
 
-The test will DELETE with a param of a userId. You should remove the user with matching userId, returning status 200 and the array of user objects *after* the correct user object has been deleted.
+You should remove the user with an id matching the ```userId``` parameter. Return status 200 and the array of user objects *after* the correct user object has been removed from the array.
 
-### When all 41 tests are passing, show your mentor.
+#### When all 41 tests are passing, show your mentor.
