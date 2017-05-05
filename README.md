@@ -26,7 +26,7 @@
 1. Select ```Collections``` on the left panel of Postman (next to History).
 2. Next to the ```node_assessment``` collection, click on the right arrow.
   - See ```images``` folder, ```image2.png```.
-3. Select the blue ```Run``` button (```image3.png```). This will open up the collection runner.
+3. Select the blue ```Run``` button. This will open up the collection runner.
   - See ```images``` folder, ```image3.png```.
 4. When you are ready to run the tests, select the blue ```Start Test``` button at the bottom. When all tests have passed, show your mentor.
 
