@@ -18,7 +18,7 @@
 1. Open Postman.
 2. In the top left corner, click on the ```Import``` button.
 
-    ![Import button](images/import_btn.png?raw=true "Import button" | width=380)
+    ![Import button](images/import_btn.png?raw=true "Import button")
 
 3. Make sure that ```Import File``` is selected / underlined, then click on ```Choose Files```.
 
@@ -35,7 +35,7 @@
     - Click on the test you want to run. Click on the blue ```Send``` button. The tests will automatically run when you send the request.
     - Select ```Tests``` to see what tests passed/failed.
 
-      ![Tests tab](images/tests_tab.png?raw=true "Tests tab" | width=400)
+      ![Tests tab](images/tests_tab.png?raw=true "Tests tab")
 
     **NOTE:** You need to be running ```nodemon``` in order to successfully run the Postman tests.
 
@@ -47,7 +47,7 @@
 
     Write your endpoints in ```server.js```.
 
-#### 1. ```'GET' /api/users```
+1. **```'GET' /api/users```**
 
     Respond with the entire users array, with status 200.
 
@@ -60,7 +60,7 @@
 
       * Example request URL: ```localhost:3000/api/users?favorites=angular```
 
-#### 2. ```'GET' /api/users/``` + userId
+2. **```'GET' /api/users/``` + userId**
 
     The tests will send a GET request with the userId as a parameter to this endpoint. Remember, request params will come as strings. If the user is found, respond with status 200 and send that user's object.
 
@@ -69,25 +69,25 @@
     **NOTE:** You will need to use ```.json()``` instead of ```.send()``` when sending just ```null```.
 
 
-#### 3. ```'GET' /api/admins```
+3. **```'GET' /api/admins```**
 
     Respond with status 200, and an array of all users who are admins.
 
-#### 4. ```'GET' /api/nonadmins```
+4. **```'GET' /api/nonadmins```**
 
     Respond with status 200, and an array of all non-admin users.
 
-#### 5. ```'GET' /api/user_type/``` + userType
+5. **```'GET' /api/user_type/``` + userType**
 
     Respond with status 200, and an array of all users that match the ```userType``` parameter.
 
-#### 6. ```'PUT' /api/users/``` + userId
+6. **```'PUT' /api/users/``` + userId**
 
     A user's information will be sent in the request body. It will contain the same type of user information container in the other user objects. You should update the user object that has an ID matching the ```userId``` parameter.
 
     Return with status 200, and the entire array of user objects *after* you have updated the correct user object.
 
-#### 7. ```'POST' /api/users```
+7. **```'POST' /api/users```**
 
     A user's information will be sent in the request body. It will contain the same type of user information contained in the other user objects, except for the ID. *You will need to add an ID to this user object before adding it to the users array.*
 
@@ -95,7 +95,7 @@
 
     You should return status 200 along with the entire array of user objects *after* the new user object has been added.
 
-#### 8. ```'DELETE' /api/users/``` + userId
+8. **```'DELETE' /api/users/``` + userId**
 
     You should remove the user with an ID matching the ```userId``` parameter. Return status 200 and the array of user objects *after* the correct user object has been removed from the array.
 
@@ -106,11 +106,11 @@
 1. Select ```Collections``` on the left panel of Postman (next to History).
 2. Next to the ```node_assessment``` collection, click on the right arrow.
 
-    ![right arrow](images/right_arrow.png?raw=true "right arrow" | width=400)
+    ![right arrow](images/right_arrow.png?raw=true "right arrow")
 
 3. Select the blue ```Run``` button. This will open up the collection runner.
 
-    ![run button](images/run_btn.png?raw=true "run button" | width=400)
+    ![run button](images/run_btn.png?raw=true "run button")
 
 4. When you are ready to run the tests, select the blue ```Start Test``` button at the bottom. When all tests have passed, show your mentor.
 
